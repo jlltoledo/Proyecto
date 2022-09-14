@@ -1,25 +1,68 @@
+*{
+    background-color: #FFFFFD;
+}
 body{
     background-color: #FFFFFD;
     font-family: Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     }
-    header{
+    
+header{
     background-color: #FFFFFD;
     max-width: 1000px;
-    margin-left: 40px;
+    margin-left: 25px;
     position: relative;
+    
+   
+}
+.colors{
+   display: flex;
+   position: relative;
+   top: 45px;
+   left: 15px;
+   
+  
+}
+
+.red{
+    background-color: #DB1010;
+    width: 12px;
+    height: 30px;
+    
+
+   
+}
+.blue{
+    background-color: #2D6ED1;
+    width: 12px;
+    height: 30px;
+ 
+}
+.yellow{
+    background-color:#F5CB36;
+    width: 12px;
+    height: 30px;
+    
 }
 h2{
      position: relative;
-    left: 15px;
+    left: 60px;
     top: 12px;
     font-weight: bolder;    
     font-size: 30px;
+    
+}
+hr{
+    
+    width: 390px;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-top: 3px solid black;
 }
 h6{
     position: relative;
-    left: 15px;
+    left: 10px;
     font-family:  Helvetica, Sans-Serif;
     font-weight: bold;
     font-size: 20px;
@@ -59,24 +102,9 @@ footer ul li a{
     font-weight: bold;
 
 }
-
-.footer ul li::before {
-    content: "";
-    height: 3px;
-    width: 0%;
-    background: black;
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-    transition: 0.4s ease-out;
+a:hover{
+    text-decoration: none;
 }
-.footer ul li:hover::before {
-    width: 100%;
-}
-
-#tlaloc{ /* Tlaloc es una conjunto ce caracteres temporal, en lo que añado un dibujo más sofisticado que ocupe su lugar*/
-    font-size: 100px;
-        text-align: right;
-        padding-right: 95px;
-        padding-top: 50px;
+.container{
+    margin-top: 20px;
 }
