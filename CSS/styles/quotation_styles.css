@@ -1,0 +1,15 @@
+body{
+    background-color: #FFFFFD;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+h1{
+    position: relative;
+    left: 30px;
+    top: 20px;
+    bottom: 5px;
+    align-items: right;
+    font-size: 40px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}

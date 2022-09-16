@@ -19,7 +19,7 @@ header{
 .colors{
    display: flex;
    position: relative;
-   top: 45px;
+   top: 50px;
    left: 15px;
    
   
@@ -50,12 +50,12 @@ h2{
     left: 60px;
     top: 12px;
     font-weight: bolder;    
-    font-size: 30px;
+    font-size: 40px;
     
 }
 hr{
     
-    width: 390px;
+    width: 380px;
     margin-left: 1%;
     margin-bottom: 1%;
     border-top: 3px solid black;
