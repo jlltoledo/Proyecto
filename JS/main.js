@@ -49,7 +49,7 @@ btnQuote.addEventListener("click", function(e){
         
         
         `;
-        cardCost.innerHTML = "$ " + quote(hours,rate, iva, extras, changes, fixedCost).toFixed(2);
+        cardCost.innerHTML = "$"  + quote(hours,rate, iva, extras, changes, fixedCost).toFixed(2);
     }
     
 //    cardText.innerHTML = quote(hours,rate, iva, extras.selectedIndex).toFixed(2);

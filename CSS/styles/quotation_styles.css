@@ -5,11 +5,52 @@ body{
 }
 h1{
     position: relative;
-    left: 30px;
+    padding-left: 90px;
     top: 20px;
     bottom: 5px;
     align-items: right;
     font-size: 40px;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
+    
 }
+#btnHome{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;    
+}
+.colors{
+    display: flex;
+    position: relative;
+    top: 1px;
+    left: 1px;
+ 
+ }
+ 
+ .red{
+     background-color: #DB1010;
+     width: 33px;
+     height: 20px;
+   
+ }
+ .blue{
+     background-color: #2D6ED1;
+     width:33px;
+     height: 20px;
+  
+ }
+ .yellow{
+     background-color:#F5CB36;
+     width: 33px;
+     height: 20px;
+     
+ }
+ #btnQuote{
+     height: 60px;
+     width: 120px;
+     font-weight: bold;
+     font-size: 20px;
+     color: whitesmoke;
+ }
+
+ 
