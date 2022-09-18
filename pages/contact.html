@@ -12,22 +12,22 @@
 
 <body>
     <header>
-        <h2>Get in touch here &#128071;</h2>
+        <h2>Let's get in touch and send me and email &#128071;</h2>
     </header>
     <br>
     <br>
     <form>
       <div class="form-group row d-flex justify-content-center" id="campos">
         <div class="col-xs-3">
-          <input type="text" class="form-control" placeholder="Name">
+          <input type="text" class="form-control" placeholder="Name" id="inputName">
         </div>
         
         <div class="col-xs-3" id="lastName" style="padding-left: 50px;">
-          <input type="text" class=" form-control" placeholder="Last name">
+          <input type="text" class=" form-control" placeholder="Last name" id="inputLast">
         </div>
 
         <div class="col-xs-3" id="lastName" style="padding-left: 50px;">
-          <input type="email" class=" form-control" placeholder="email">
+          <input type="email" class=" form-control" placeholder="email" id="inputEmail">
         </div>
     
       </div>
@@ -35,19 +35,21 @@
       <div class="form-group row d-flex justify-content-center">
         <div class="form-group">
           <label for="exampleFormControlTextarea1"></label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" cols="80"   placeholder="Leave your message here..."></textarea>
+          <textarea class="form-control" id="msgArea" rows="5" cols="80"   placeholder="Leave your message here..."></textarea>
         </div>
-       
       </div>
       
       <div class="form-group row d-flex justify-content-center">
       
         <div class="form-group">
-      <input class="btn btn-warning" type="submit" value="Submit" id="btnEnviar">
+      <input class="btn btn-warning" type="submit" value="Send" id="btnEnviar">
       </div><!--Submit-->
 
       <div class="form-group" style="padding-left: 50px;">
       <a href="/index.html" class="btn btn-outline-dark" id="btnHome">
+        <div id="alertSend" class="alert alert-danger" style="display: none" role="alert">
+          Make sure you fill in all the fields!
+        </div>
         
         <div class="colors">
           <div class="red"></div>
@@ -64,8 +66,8 @@
     </form>
 
     
-        
-      
+      <script src="https://smtpjs.com/v3/smtp.js"></script>  
+      <script src="/JS/contact.js"></script>
       
 
     
