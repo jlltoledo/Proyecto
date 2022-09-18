@@ -13,10 +13,6 @@ btnQuote.addEventListener("click", function(e){
     let email = document.getElementById("inputEmail").value;
     let name = document.getElementById("inputName").value;
     changes = (isNaN(changes)?0:changes); //if ternario
-    // console.log(extras.selectedIndex);
-    // console.log(extras.options[extras.selectedIndex].value);
-    // console.log(iva);
-    // console.log(typeof(iva));
     let cardText = document.getElementById("cardText");
     let cardCost = document.getElementById("cardCost");
     let flag = true;
@@ -52,8 +48,7 @@ btnQuote.addEventListener("click", function(e){
         cardCost.innerHTML = "$"  + quote(hours,rate, iva, extras, changes, fixedCost).toFixed(2);
     }
     
-//    cardText.innerHTML = quote(hours,rate, iva, extras.selectedIndex).toFixed(2);
-    //cardText.innerHTML = "$" + quote(hours,rate, iva, extras, changes, fixedCost).toFixed(2);
+
 
 });
 
