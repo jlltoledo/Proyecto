@@ -17,7 +17,13 @@ btnQuote.addEventListener("click", function(e){
     let cardCost = document.getElementById("cardCost");
     let flag = true;
     console.log(hours);
+    
+    
+    
 
+
+    
+    //horas
     if (isNaN(hours)) {
         console.log("Hours not a number");
         console.log(document.getElementById("inputHours").style.borderColor);
@@ -28,7 +34,7 @@ btnQuote.addEventListener("click", function(e){
         document.getElementById("inputHours").value = hours;
         document.getElementById("inputHours").style.borderColor = "#00FF00";
     }
-
+    //tarifa
     if (isNaN(rate)) {
         console.log("Rate not a number");
         document.getElementById("inputRate").style.borderColor = "#FF0000"; 
@@ -37,7 +43,7 @@ btnQuote.addEventListener("click", function(e){
         document.getElementById("inputRate").value = rate;
         document.getElementById("inputRate").style.borderColor = "#00FF00";
     }
-    
+    //requirements
     if (flag){
         cardText.innerHTML = `Email: ${email} <br/> Name: ${name} <br/>
         We can quote a price of requirements:<br/> ${getRequirements(extras)}
@@ -47,10 +53,39 @@ btnQuote.addEventListener("click", function(e){
         `;
         cardCost.innerHTML = "$"  + quote(hours,rate, iva, extras, changes, fixedCost).toFixed(2);
     }
+    //botón enlazado al servidor de correos
+    let sendNombre = name;
+    let sendCorreo = email;
+    let sendCuerpo = "El correo del ususario es: " + sendCorreo;
+    let asunto = "Cotización";
+   
+    sendCuerpo += "\nEl asunto es: " +asunto+".  \nEl nombre del usuario es: " 
+    +sendNombre+"   y su cotización es: " 
+    +cardCost.innerHTML;
     
+    if(asunto.value!=""&& name.value!="" && email.value !="" && cardCost.innerHTML != "")
+
+    {
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "jltoledo.ux@gmail.com",
+            Password : "F8368BFD72066CD5A05B6921D4C9A0D8CA40",
+            To : 'jltoledo.ux@gmail.com',
+            From : "jltoledo.ux@gmail.com",
+            Subject : asunto,
+            Body : sendCuerpo
+        }).then(
+          message => alert("Success!")
+        );
+    }else{
+        alertSend.style.display = "block";
+            setTimeout( ()=>{alertSend.style.display = "none"}, 5000);
+    }
 
 
-});
+});//correo
+
+
 
 btnPrint.addEventListener("click", function(e){
     e.preventDefault();

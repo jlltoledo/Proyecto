@@ -1,11 +1,10 @@
 let btnEnviar = document.getElementById("btnEnviar");
     let nombre = document.getElementById("inputName");
-    let apellido = document.getElementById("inputLast");
     let correo = document.getElementById("inputEmail");
     let mensaje = document.getElementById("msgArea");
     let alertSend = document.getElementById("alertSend");
     let regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    console.log(nombre.value, apellido.value, correo.value, mensaje.value);
+    console.log(nombre.value, correo.value, mensaje.value);
 
 
     
@@ -28,20 +27,7 @@ let btnEnviar = document.getElementById("btnEnviar");
     });//nombre
 
 
-    //if/else apellido
-    apellido.addEventListener("blur", function(e){
-        e.preventDefault();
-        
-    if (
-        (apellido.value.length >= 4) && (apellido.value.length<=20)
-    ){
-        apellido.classList.remove("is-invalid");
-        apellido.classList.add("is-valid");
-    }else{
-        apellido.classList.remove("is-valid");
-        apellido.classList.add("is-invalid");
-    }
-    });//apellido
+    
 
     //input del correo:
     correo.addEventListener("blur", function(e){
@@ -114,15 +100,15 @@ let btnEnviar = document.getElementById("btnEnviar");
     
 btnEnviar.addEventListener("click", function(e){
         e.preventDefault();
-let sendNombre = nombre.value + " " + apellido.value;
+let sendNombre = nombre.value;
 let sendCorreo = correo.value;
 let sendAsunto = "Pregunta-Contacto";
-let sendCuerpo = "-El correo del usuario es: " + sendCorreo;
+let sendCuerpo = "El correo del usuario es: " + sendCorreo + ".";
 
-sendCuerpo += " - El nombre del usuario es: " +sendNombre+" -Y su mensaje es: " + mensaje.value;
+sendCuerpo += " El nombre del usuario es: " +sendNombre+". \nY su mensaje es: " + mensaje.value;
 
 
-if(nombre.value!="" && apellido.value !="" && correo.value != "" && mensaje.value != ""){
+if(nombre.value!=""  && correo.value != "" && mensaje.value != ""){
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "jltoledo.ux@gmail.com",
